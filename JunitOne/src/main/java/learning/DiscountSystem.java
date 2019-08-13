@@ -43,4 +43,17 @@ public class DiscountSystem {
             return false;
         }
     }
+
+    public static int solveApplyDiscountInShoppingCart(String target){
+        int cartTotal = 1300;
+        int adjustedTotal = 0;
+        if(target == "Birthday100"){
+            adjustedTotal = cartTotal - 100;
+            return adjustedTotal;
+        }else{
+            adjustedTotal = cartTotal;
+            System.out.println("Invalid discount coupon!");
+            return adjustedTotal;
+        }
+    }
 }

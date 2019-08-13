@@ -31,12 +31,18 @@ public class DiscountTest extends TestCase {
     public void testValidityPeriodDiscounts() throws ParseException{
         String target = "08/20/2019";
         boolean valid = DiscountSystem.solveValidityPeriodDiscount(target);
-        assertEquals(valid, true);
+        assertEquals(true, valid);
     }
 
     public void testSpecificProductDiscounts(){
         String target = "laptop";
         boolean valid = DiscountSystem.solveSpecificProductDiscounts(target);
-        assertEquals(valid, true);
+        assertEquals(true, valid);
+    }
+
+    public void testApplyDiscountInShoppingCart(){
+        String target = "Birthday100";
+        int result = DiscountSystem.solveApplyDiscountInShoppingCart(target);
+        assertEquals(1200, result);
     }
 }
